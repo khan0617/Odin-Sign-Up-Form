@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <p>Photo by Halle West on Unsplash</p>
+            <!-- <img src="./images/plants.jpg" alt="Photo of Ferns by Hallie West on Unsplash"> -->
+        </div>
+        
+        <div class="form-side">
+            <div class="description">
+                This is not a real online service! You know you need something like this in your
+                life to help you realize your deepest dreams. Sign up <em>now</em> to get started.
+
+                <p>You <em>know</em> you want to.</p>
+                
+            </div>
+
+            <div class="form-container">
+                <h1>Let's do this!</h1>
+                <form action="get">
+                    <div class="form-row">
+                        <div class="form-item">
+                            <label for="firstName">FIRST NAME</label>
+                            <input type="text" name="firstName" id="firstName" 
+                            pattern="(/^[A-Za-z]+$/)" required>
+                        </div>
+    
+                        <div class="form-item">
+                            <label for="lastName">LAST NAME</label>
+                            <input type="text" name="lastName" id="lastName" 
+                            pattern="(/^[A-Za-z]+$/)" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-item">
+                            <label for="email">EMAIL</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+    
+                        <div class="form-item">
+                            <label for="phone">PHONE NUMBER</label>
+                            <input type="tel" name="phone" id="phone" 
+                            pattern="[0-9]{3}-?[0-9]-?{3}[0-9]{4}" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-item error">
+                            <label for="password">PASSWORD</label>
+                            <input type="password" name="password" id="password" required>
+                        </div>
+    
+                        <div class="form-item error">
+                            <label for="confirmPass">CONFIRM PASSWORD</label>
+                            <input type="password" name="confirmPass" id="confirmPass" required>
+                        </div>
+                    </div>
+
+                    
+
+                </form>
+            </div>
+
+        </div>
+        
+    </div>
+</body>
+</html>

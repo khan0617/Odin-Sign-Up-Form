@@ -1,0 +1,35 @@
+@font-face {
+    font-family: NorseBold;
+    src: url(./fonts/Norse-Bold.otf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+}
+
+.image-container {
+    display: flex;
+    background: url(./images/plants.jpg) no-repeat;
+    background-size: cover;
+    width: 75%;
+    height: 100%;
+}
+
+.image-container > p {
+    color: white;
+}
+
