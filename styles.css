@@ -5,6 +5,8 @@
 
 * {
     box-sizing: border-box;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Courier New', Courier, monospace;
 }
 
 body {
@@ -19,17 +21,156 @@ body {
 
 .container {
     display: flex;
+    width: 100%;
 }
 
+
+/* image styling below */
 .image-container {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: url(./images/plants.jpg) no-repeat;
     background-size: cover;
-    width: 75%;
+    width: 60%;
     height: 100%;
 }
 
 .image-container > p {
     color: white;
+    margin-top: auto;
 }
 
+.odin-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 22.5%;
+}
+
+
+.odin-text {
+    color: white;
+    font-family: NorseBold, sans-serif;
+    font-size: 150px;
+}
+
+img {
+    width: 200px;
+    height: auto;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+/* form styling below */
+.form-side {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.description {
+    background-color: aliceblue;
+    padding: 30px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5em;
+}
+
+.description > p {
+    width: 80%;
+}
+
+.form-container{
+    box-shadow: 0 4px 5px -2px gray;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 30px;
+}
+
+.form-container h1 {
+    font-size: 24px;
+    font-weight: 600;
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+
+.form-row {
+    display: flex;
+    gap: 5em;
+}
+
+.form-item{
+    display: flex;
+    flex-direction: column;
+}
+
+.error-msg {
+    font-size: 11px;
+    color: red;
+    visibility: hidden;
+}
+
+form label {
+    font-size: 14px;
+    color: darkslategray
+}
+
+[type='text'], [type='tel'], [type='email'], [type='password']{
+    width: 250px;
+    padding: 2px;
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
+}
+
+[type='text']:focus, 
+[type='tel']:focus,
+[type='email']:focus, 
+[type='password']:focus{
+    outline: none;
+    border: 2px solid #596D48;
+    border-radius: 4px;
+    box-shadow: 0 4px 5px -2px gray;
+}
+
+.error {
+    outline: none;
+    border: 2px solid red;
+    border-radius: 4px;
+}
+
+
+.submit {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+
+/* submit button styling below the form */
+[type='submit'] {
+    color: white;
+    border: 0;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 8px;
+    background-color: #596D48;
+    padding: 15px 40px;
+}
+
+.hasAccount {
+    color: #596D48;
+    cursor: pointer;
+}

@@ -1,42 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script async defer src="./formScript.js"></script>
 </head>
+
 <body>
     <div class="container">
         <div class="image-container">
-            <p>Photo by Halle West on Unsplash</p>
-            <!-- <img src="./images/plants.jpg" alt="Photo of Ferns by Hallie West on Unsplash"> -->
+
+            <div class="odin-container">
+                <img src="./images/odin.png" alt="The Odin Project Logo">
+                <span class="odin-text">ODIN</span>
+            </div>
+
+            <p>Photo by <span class="underline">Halle West</span> on
+                <span class="underline">Unsplash</span>
+            </p>
         </div>
-        
+
         <div class="form-side">
             <div class="description">
-                This is not a real online service! You know you need something like this in your
-                life to help you realize your deepest dreams. Sign up <em>now</em> to get started.
+                <p>
+                    This is not a real online service! You know you need something like this in your
+                    life to help you realize your deepest dreams.
+                    <br> Sign up <em>now</em> to get started.
+                </p>
+
 
                 <p>You <em>know</em> you want to.</p>
-                
+
             </div>
 
             <div class="form-container">
                 <h1>Let's do this!</h1>
-                <form action="get">
+                <form id="myForm">
                     <div class="form-row">
                         <div class="form-item">
                             <label for="firstName">FIRST NAME</label>
-                            <input type="text" name="firstName" id="firstName" 
-                            pattern="(/^[A-Za-z]+$/)" required>
+                            <input type="text" name="firstName" id="firstName" pattern="[a-zA-Z]+"
+                                title="Please only use A-z characters" required>
                         </div>
-    
+
                         <div class="form-item">
                             <label for="lastName">LAST NAME</label>
-                            <input type="text" name="lastName" id="lastName" 
-                            pattern="(/^[A-Za-z]+$/)" required>
+                            <input type="text" name="lastName" id="lastName" pattern="[a-zA-Z]+"
+                                title="Please only use A-z characters" required>
                         </div>
                     </div>
 
@@ -45,33 +62,37 @@
                             <label for="email">EMAIL</label>
                             <input type="email" name="email" id="email" required>
                         </div>
-    
+
                         <div class="form-item">
                             <label for="phone">PHONE NUMBER</label>
-                            <input type="tel" name="phone" id="phone" 
-                            pattern="[0-9]{3}-?[0-9]-?{3}[0-9]{4}" required>
+                            <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-?[0-9]{3}-?[0-9]{4}"
+                                title="Requested format: 1234567890 OR 123-456-7890" required>
                         </div>
                     </div>
 
                     <div class="form-row">
-                        <div class="form-item error">
+                        <div class="form-item">
                             <label for="password">PASSWORD</label>
                             <input type="password" name="password" id="password" required>
+                            <p class="error-msg">* Passwords do not match</p>
                         </div>
-    
-                        <div class="form-item error">
+
+                        <div class="form-item">
                             <label for="confirmPass">CONFIRM PASSWORD</label>
                             <input type="password" name="confirmPass" id="confirmPass" required>
                         </div>
                     </div>
-
-                    
-
                 </form>
             </div>
 
+            <div class="submit">
+                <input type="submit" form="myForm" value="Create Account" id="submitBtn">
+                <p>Already have an account? <span class="hasAccount">Log in</span></p>
+            </div>
+
         </div>
-        
+
     </div>
 </body>
+
 </html>
